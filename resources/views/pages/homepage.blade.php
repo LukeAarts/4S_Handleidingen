@@ -1,9 +1,9 @@
 @extends('layouts.default')
 
 @section('introduction_text')
-    <p>{{ __('introduction_texts.homepage_line_1') }}</p>
-    <p>{{ __('introduction_texts.homepage_line_2') }}</p>
-    <p>{{ __('introduction_texts.homepage_line_3') }}</p>
+    <p><b>{{ __('introduction_texts.homepage_line_1') }}</b></p>
+    <p><b>{{ __('introduction_texts.homepage_line_2') }}</b></p>
+    <p><b>{{ __('introduction_texts.homepage_line_3') }}</b></p>
 @endsection
 
 @section('content')
@@ -24,8 +24,6 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-            <div class="site-footer">
-
             @foreach($brands->chunk($chunk_size) as $chunk)
                 <div class="col-md-4">
 
@@ -45,10 +43,9 @@
 
                             <li>
                                 <a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/">{{ $brand->name }}</a>
-                            </li>                            
+                            </li>                                                        
                         @endforeach
                     </ul>
-                        </div>
                 </div>
                 <?php
                 unset($header_first_letter);
