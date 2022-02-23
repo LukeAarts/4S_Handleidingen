@@ -24,6 +24,7 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
+            <div class="site-footer">
 
             @foreach($brands->chunk($chunk_size) as $chunk)
                 <div class="col-md-4">
@@ -44,10 +45,10 @@
 
                             <li>
                                 <a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/">{{ $brand->name }}</a>
-                            </li>
+                            </li>                            
                         @endforeach
                     </ul>
-
+                        </div>
                 </div>
                 <?php
                 unset($header_first_letter);
